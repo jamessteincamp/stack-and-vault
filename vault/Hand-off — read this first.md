@@ -58,4 +58,8 @@ git push
 
 ## Keeping it alive
 
-Twenty minutes after each new piece of work, following [[Inbox — how to empty it]]: capture the text and the feedback, write the work note, write three to eight new zettels for what was new, read the feedback properly, and log anything you promised. The vault gets more useful every week because you and the assistant are working from the same growing set of precise claims.
+Twenty minutes after each new piece of work, following [[Inbox — how to empty it]]: capture the text and the feedback, write the work note, write three to eight new zettels for what was new, read the feedback properly, and log anything you promised.
+
+Then one hour a week, following [[Week — how to synthesise]]. That one is easy to skip and it is the one that makes the rest compound: without it the daily notes are expensive bookmarks. If only one habit survives, make it the weekly one.
+
+Capture is never the problem. Draining is — an inbox that is never empty is the commonest way these systems die, which is why the drain has a bucket for *delete it, guilt-free* and a bucket for *this was never a note*.

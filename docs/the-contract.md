@@ -1,6 +1,6 @@
 # The contract between the stack and the vault
 
-The operational version of this document lives inside the vault, at `vault/Maps/Working with the teammate stack.md`, because the assistant needs to find it from inside the vault. This page is the reasoning behind it, for a person deciding whether to run both.
+The operational version of this document lives inside the vault, at `vault/20 Maps/Working with the teammate stack.md`, because the assistant needs to find it from inside the vault. This page is the reasoning behind it, for a person deciding whether to run both.
 
 ## The one-line rule
 
@@ -34,7 +34,9 @@ The stack's `03-anti-style.md` names false certainty and false specificity, numb
 
 ## Where they meet on the calendar
 
-The stack audits quarterly; the vault logs daily. They meet at the audit, where three questions belong on the stack's checklist: did the sourcing backlog shrink, did the promises ledger shrink, and did the vault reduce inboxes or become one.
+Three cadences, each doing what the others cannot. The vault logs daily. It synthesises weekly — an hour, written cold from the week's notes, which is where the compounding happens. The stack audits quarterly.
+
+They meet at the audit, where three questions belong on the stack's checklist: did the sourcing backlog shrink, did the promises ledger shrink, and did the vault reduce inboxes or become one. A fourth is worth adding once the weekly habit exists: how many weekly syntheses actually got written this quarter. It is the honest measure of whether the practice is running, and a quarter of zero says more than any count of notes.
 
 ## If you only want one
 

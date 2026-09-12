@@ -8,7 +8,9 @@ It has three layers, and the point of the repository is how they fit together:
 |---|---|---|---|
 | **The stack** (`stack/`) | *Who is speaking, and how.* Who you are, how you sound, how you want to be worked with, what the assistant may touch. | Eight short files | Whole, at the start of every session |
 | **The vault** (`vault/`) | *What is true, and where it came from.* One idea per note, the title is the claim, every claim carries its boundary and its evidence. | Grows without limit | Selectively: five to twelve notes chosen for the job |
-| **The wiki layer** (`vault/Maps/`) | *How the ideas hang together.* Hub pages, indexes, ledgers and pre-assembled briefing packs. | A dozen pages | As the entry point to the vault |
+| **The wiki layer** (`vault/20 Maps/`) | *How the ideas hang together.* Hub pages, indexes, ledgers and pre-assembled briefing packs. | A dozen pages | As the entry point to the vault |
+
+The folders are numbered so the sidebar sorts them in the order the work happens — capture, think, organize, log, cite — rather than alphabetically. The tools match folders by stage, so if you prefer plain names they still work.
 
 The stack is a copy of the [teammate-stack](https://github.com/jamessteincamp/teammate-stack) template. The vault is a Zettelkasten with a wiki on top, built to be read by a person in [Obsidian](https://obsidian.md) and by an assistant through its own `CLAUDE.md`. The contract between the two, which one wins when they disagree and why, is in `docs/the-contract.md`.
 
@@ -35,19 +37,22 @@ stack-and-vault/
 ├── stack/               the teammate-stack template, eight files plus an audit log
 ├── vault/               the starter vault: open this folder in Obsidian
 │   ├── CLAUDE.md        the assistant's standing instructions for working in the vault
-│   ├── Templates/       one template per kind of note, with the rules written into it
-│   ├── Maps/            Start Here, the indexes, the ledgers, the routines
-│   └── Inbox/ Notes/ Sources/ Daily Notes/
+│   ├── 00 Inbox/        raw material, not yet notes
+│   ├── 10 Notes/        the permanent notes: ideas, vocabulary, people, objections
+│   ├── 20 Maps/         Start Here, the indexes, the ledgers, the routines, the packs
+│   ├── 30 Daily/        one note per working day, plus the weekly synthesis
+│   ├── 40 Sources/      the works themselves, feedback captures, citation notes
+│   └── 99 Templates/    one template per kind of note, with the rules written into it
 ├── tools/               three small Python scripts: check the vault, build a pack, count things
 └── example/             a filled-in vault on a deliberately small subject, so the shape is visible
 ```
 
 ## Quick start
 
-1. **Read `example/`** first, in Obsidian or any editor. It is a dozen notes about keeping a sourdough starter. The subject is unimportant; the shape is the point. Start at `example/Maps/00 Start Here.md`.
+1. **Read `example/`** first, in Obsidian or any editor. It is a dozen notes about keeping a sourdough starter. The subject is unimportant; the shape is the point. Start at `example/20 Maps/00 Start Here.md`.
 2. **Copy `vault/` to wherever you keep your notes** and open it as an Obsidian vault. Read `vault/CLAUDE.md` and the templates. Fill in the mission notes and the Start Here page.
 3. **Build your stack** by following `stack/README.md`. Expect it to take an afternoon.
-4. **Point your assistant at both.** The repository's own `CLAUDE.md` says what to read and in what order. If your assistant reads `CLAUDE.md` files automatically, that is all the setup there is. If you use a chat interface, paste the stack, then paste one pack from `vault/Maps/`.
+4. **Point your assistant at both.** The repository's own `CLAUDE.md` says what to read and in what order. If your assistant reads `CLAUDE.md` files automatically, that is all the setup there is. If you use a chat interface, paste the stack, then paste one pack from `vault/20 Maps/`.
 5. **Run the checker** now and then: `python3 tools/vault_check.py vault/`. It finds broken links, invalid frontmatter, and claims that are missing their boundary.
 
 ## The four rules of the vault

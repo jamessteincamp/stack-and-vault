@@ -14,6 +14,8 @@ There is an old ladder of giving on which the highest rung is the gift that ends
 
 **Conventions written down, in the vault, more than once.** The four rules in the hand-off page; the full conventions in `CLAUDE.md`; the rules for each kind of note written into its template as comments. A convention that lives only in the builder's head is a dependency.
 
+**A drain, not just a capture habit.** The person receiving the vault will fill an inbox within a week; whether they ever empty it decides whether the vault survives. So the routine they get has to include permission to throw things away — the bucket for material that was never a note, and the bucket for *delete it, guilt-free* — and a weekly hour that connects what they wrote. A hand-off that teaches capture and not draining hands over a landfill in slow motion.
+
 **Routines, not instructions.** `Inbox — how to empty it` is a twenty-minute procedure the owner can follow, not a description of what the builder used to do. The research routine, the triage routine and the briefing recipes are the same: written so the owner, or the owner's assistant, can run them.
 
 **Tools with their prerequisites named.** If a script is part of the workflow, its README says what it needs (Python 3, say, and nothing else) and what each script does in one line. A script that needs the builder's machine is not a tool; it is a favour.

@@ -16,7 +16,7 @@ import pathlib
 from collections import Counter, defaultdict
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from vaultlib import load_vault, title_index, resolve, TEMPLATE_DIR, word_count
+from vaultlib import load_vault, title_index, resolve, word_count
 
 
 def main(argv):
@@ -30,13 +30,13 @@ def main(argv):
     if len(args) != 1:
         sys.exit(__doc__)
     root, notes = load_vault(args[0])
-    notes = [n for n in notes if n.folder != TEMPLATE_DIR and n.title not in {"README", "CLAUDE"}]
+    notes = [n for n in notes if n.stage != "templates" and n.title not in {"README", "CLAUDE"}]
     index = title_index(notes)
 
     by_type = Counter(n.type or "(none)" for n in notes)
     zettels = [n for n in notes if n.type == "zettel"]
     sources = [n for n in notes if n.type == "source"]
-    inbox = [n for n in notes if n.folder == "Inbox"]
+    inbox = [n for n in notes if n.stage == "inbox"]
     words = sum(word_count(n.body) for n in notes)
 
     inbound = defaultdict(set)

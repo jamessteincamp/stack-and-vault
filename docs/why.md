@@ -22,9 +22,29 @@ Each layer changes at a different rate and is loaded a different way, and that i
 
 The stack changes over months and is loaded whole. The vault changes daily and is loaded selectively. The wiki layer changes when the vault does and is the entry point to it. Put the stack's rules into the vault's notes and they get lost among five hundred files. Put the vault's facts into the stack and the stack swells into a stale second copy of the ledgers. `docs/the-contract.md` is the set of rules that keeps each layer doing its own job.
 
+## The strongest objection to all of this
+
+The method's own best critic is worth stating plainly, because it is the thing most likely to be true.
+
+**The vault corrects nothing by itself. It amplifies whatever epistemic habits you bring to it.** The usual claim for a Zettelkasten is that linking forces you to reconsider, that the structure surfaces contradictions you would otherwise miss. But linking is frictionless, and a growing link count *feels* like intellectual progress. A confirmation-biased linker produces a beautifully cross-referenced echo chamber, and every note in it will look rigorous — titled as a claim, boundary stated, three links, frontmatter complete — while the whole assembly quietly agrees with itself.
+
+Nothing in a folder structure fixes that. Two things partly do, and both are procedural rather than structural.
+
+The first is treating **every link as a claim that owes an answer** to the same question a note owes: what would make this connection false? The valuable edges are the surprising ones, the connections you did not expect and now have to justify. An edge reached for to confirm a hunch is cheap. That rule is in the zettel template and in `vault/CLAUDE.md`, and it is the one most easily ignored, because ignoring it is indistinguishable from working quickly.
+
+The second is **external feedback**. Objection notes exist because someone disagreed; the *Tensions* section on a map exists because two of your own notes pull against each other; the `evidence:` field exists because a claim with nothing behind it should say so. All three import friction from outside your own approval. A vault with no objections, no tensions and no `asserted` notes is not a mature vault. It is an unexamined one.
+
+Keep the objection in view while using the method. It is the reason the boundary section and the evidence field are not optional decoration.
+
 ## What the method is not
 
 It is not a productivity system, and it has no opinion about task management. It is not a note-taking app; it is plain Markdown and works in any editor. It is not a way to have the assistant do the thinking. The synthesis that happens in the assistant's fingers does not compound in your head; the vault is where the thinking compounds, and the assistant is an accelerator you can do without for an afternoon.
+
+## Three cadences, and the one that matters
+
+Daily notes log what happened. A weekly synthesis — an hour, written cold from the week's list — is where separate notes become thinking: the pattern across two notes, the thing you believed on Monday and would now state differently. If you also keep a stack, its audit is quarterly and asks whether any of this is still earning its keep.
+
+The weekly one is the cadence most often skipped and the one that does most of the compounding. Without it the daily notes are expensive bookmarks, and the vault is an archive rather than a practice.
 
 ## Two things it buys that nothing else does
 

@@ -6,7 +6,7 @@ This is a toolkit, not a body of work. It holds a template stack, a starter vaul
 
 1. `stack/`, whole. Eight short files plus the audit log. It says who you are working for and how they want to be worked with. Weight `04-context.md` most for *what to do today* and `05-rules.md` for *how to do it*.
 2. `vault/CLAUDE.md`. The conventions for every note in the vault, and the routines for the recurring jobs: processing new material, researching a claim, drafting from notes, answering pushback.
-3. One pack from `vault/Maps/`, never the vault whole. See `docs/briefing.md`.
+3. One pack from `vault/20 Maps/`, never the vault whole. See `docs/briefing.md`.
 
 ## Precedence
 

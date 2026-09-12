@@ -7,21 +7,23 @@ Reports, per note:
   ERROR  a note in Notes/ or Sources/ has no frontmatter, or no `type:`
   ERROR  `type:`, `status:` or `evidence:` holds a value the conventions do not know
   ERROR  a zettel is missing one of its five sections, or its "Not true when" is empty
-  ERROR  a link points into Inbox/ (nothing in Inbox is settled)
+  ERROR  a link points into the inbox (nothing in the inbox is settled)
   WARN   a link points at a note that does not exist (a "ghost" link; fine while
          drafting, an error with --strict)
-  WARN   Inbox/ is not empty
+  WARN   the inbox is not empty
   WARN   a source note has no citation line
 
-Exits 1 if there were errors (or, with --strict, warnings), 0 otherwise. Templates,
-.obsidian and _tools are skipped. Standard library only.
+Exits 1 if there were errors (or, with --strict, warnings), 0 otherwise. The
+templates folder, .obsidian and _tools are skipped. Folders are matched by stage,
+so numbered names ("00 Inbox") and plain ones ("Inbox") both work. Standard
+library only.
 """
 import sys
 import pathlib
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from vaultlib import (load_vault, title_index, resolve, TYPES, ZETTEL_STATUS,
-                      SOURCE_STATUS, EVIDENCE, ZETTEL_SECTIONS, TEMPLATE_DIR)
+                      SOURCE_STATUS, EVIDENCE, ZETTEL_SECTIONS, FOLDERS)
 
 
 def main(argv):
@@ -40,13 +42,13 @@ def main(argv):
     def warn(n, msg):
         warnings.append(f"{n.rel}: {msg}")
 
-    inbox_items = [n for n in notes if n.folder == "Inbox" and n.title != "README"]
+    inbox_items = [n for n in notes if n.stage == "inbox" and n.title != "README"]
     inbox_titles = {n.title.lower() for n in inbox_items}
 
     for n in notes:
-        if n.folder == TEMPLATE_DIR or n.title in {"README", "CLAUDE"}:
+        if n.stage == "templates" or n.title in {"README", "CLAUDE"}:
             continue
-        must_have_front = n.folder in {"Notes", "Sources"}
+        must_have_front = n.stage in {"notes", "sources"}
         if not n.front:
             if must_have_front:
                 err(n, "no frontmatter")
@@ -89,11 +91,12 @@ def main(argv):
             hit = resolve(target, index)
             if hit is None:
                 warn(n, f"ghost link [[{target}]]")
-            elif hit.title.lower() in inbox_titles and n.folder != "Inbox":
+            elif hit.title.lower() in inbox_titles and n.stage != "inbox":
                 err(n, f"links into Inbox: [[{target}]]")
 
     if inbox_items:
-        warnings.append(f"Inbox/ holds {len(inbox_items)} unprocessed item(s); see Maps/Inbox — how to empty it.md")
+        warnings.append(f"{FOLDERS['inbox']}/ holds {len(inbox_items)} unprocessed item(s); "
+                        f"see {FOLDERS['maps']}/Inbox — how to empty it.md")
 
     if not quiet:
         for e in errors:

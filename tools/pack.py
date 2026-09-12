@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Assemble a briefing pack into one file for pasting.
 
-    python3 tools/pack.py <vault> "Maps/Pack — <job>.md" [-o brief.md]
+    python3 tools/pack.py <vault> "20 Maps/Pack — <job>.md" [-o brief.md]
     python3 tools/pack.py <vault> --titles "Title one" "Title two" ... [-o brief.md]
 
 Reads the [[wikilinks]] under the pack note's "notes to load" heading (or every link

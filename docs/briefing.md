@@ -1,10 +1,10 @@
 # Briefing: packs and recipes
 
-The operational version is inside the vault at `vault/Maps/How to brief an assistant from this vault.md`. This page explains the idea of a pack and when to build one.
+The operational version is inside the vault at `vault/20 Maps/How to brief an assistant from this vault.md`. This page explains the idea of a pack and when to build one.
 
 ## What a pack is
 
-A pack is a pre-assembled brief for a job that comes up more than once: drafting the next piece in a series, answering a recurring kind of pushback, working the research queue. It is a note in `Maps/` that lists the five to twelve vault notes to hand the assistant, in order, and the ask written out so it does not have to be re-invented.
+A pack is a pre-assembled brief for a job that comes up more than once: drafting the next piece in a series, answering a recurring kind of pushback, working the research queue. It is a note in `20 Maps/` that lists the five to twelve vault notes to hand the assistant, in order, and the ask written out so it does not have to be re-invented.
 
 `tools/pack.py` reads the wikilinks in a pack note and writes the bodies of those notes into one file for pasting. That is the whole mechanism. A pack is a query over the vault, saved.
 
