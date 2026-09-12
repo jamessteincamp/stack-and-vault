@@ -61,8 +61,10 @@ stack-and-vault/
 
 This is an early, working version, shared to get feedback. It was extracted from a vault in daily use and de-identified; the method is kept and the person is removed. Issues and pull requests are welcome, especially on the parts that only prove themselves in use: the evidence field, the triage routine, and the contract.
 
-## License
+## Licensing
 
-The text (everything except `tools/`) is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The scripts in `tools/` are MIT. See `LICENSE`.
-# stack-and-vault
-# stack-and-vault
+Two licenses, split by what the thing is.
+
+**The text is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)** — the documentation, the stack template, the vault templates and maps, and the example vault. Adapt it freely, including commercially; keep the attribution. The full text is in `LICENSE` at the root. `stack/` arrived under the same license, being a copy of [teammate-stack](https://github.com/jamessteincamp/teammate-stack).
+
+**The scripts in `tools/` are [MIT](https://opensource.org/licenses/MIT)**, with the text in `tools/LICENSE`. Creative Commons licenses are not meant for software — no patent grant, no warranty disclaimer — and MIT is what lets you drop `vault_check.py` into your own project without stopping to work out how one credits a linter.
