@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+
+# Obsidian per-user UI state (app.json / appearance.json / core-plugins.json are kept)
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+**/.obsidian/cache
+**/.obsidian/plugins/*/data.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Build artefacts
+*.zip
