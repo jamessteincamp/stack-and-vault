@@ -12,5 +12,9 @@
 __pycache__/
 *.pyc
 
+# Maintainer's own instructions for an AI session in this repo, which are
+# about maintaining the template and are not part of it
+CLAUDE.local.md
+
 # Build artefacts
 *.zip
