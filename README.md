@@ -64,3 +64,4 @@ This is an early, working version, shared to get feedback. It was extracted from
 ## License
 
 The text (everything except `tools/`) is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The scripts in `tools/` are MIT. See `LICENSE`.
+# stack-and-vault
